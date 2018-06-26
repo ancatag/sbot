@@ -1,4 +1,4 @@
-<!doctype HTML>
+<!doctype html>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,15 +6,15 @@
 	<meta name="description" content="HDFC Website">
 	<meta name="author" content="hdfc.com">
     <meta name="viewport" content="width=device-width initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="assets/jquery-ui-1.12.1.custom/jquery-ui.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/bootstrap-4.1.1/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../assets/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="../assets/bootstrap-4.1.1/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
     <!-- <script type="text/javascript" src="assets/js/roslib.min.js"></script> -->
 </head>
 <body class="background-image">
 	<header>
-		<p>Hi, I'm SAYA - Robot For Banking Assistance</p>
+		<p>नमस्ते, मैं साया हूं - बैंकिंग सहायता के लिए रोबोट</p>
 		<ul>
 			<li>
 				<div id="player">
@@ -26,7 +26,7 @@
 			<li>
 				<p id="time"></p>
 			</li>
-			<a href="index.htm"><li><i id="homeBtn" class="fa fa-home"></i></a></li>
+			<a href="index.html"><li><i id="homeBtn" class="fa fa-home"></i></a></li>
 			<!-- <li>
 				<i class="icon-battery hdfc-sprite empty"></i>
 				<i class="icon-battery hdfc-sprite half"></i>
@@ -36,62 +36,62 @@
 	</header>
 	<main>
 		<div class="container-choice">
-			<h2>Tap on the Option of your Choice</h2>
+			<h2>अपनी पसंद के विकल्प पर टैप करें</h2>
 			<span class="hr-line"></span>
 			<div class="content">
 				<div class="column-two" id="choice_cash_withdrawal">
 					<i class="icon-vertical-line hdfc-sprite"></i>
 					<i class="icon-options hdfc-sprite one"></i>
 					<div class="option-bg hdfc-sprite">
-						<p> Cash Withdrawal</p>
+						<p>नकद निकासी</p>
 					</div>
 				</div>
 				<div class="column-two" id="choice_cash_deposit">
 					<i class="icon-vertical-line hdfc-sprite"></i>
 					<i class="icon-options hdfc-sprite two"></i>
 					<div class="option-bg hdfc-sprite">
-						<p>Cash Deposit</p>
+						<p>नकद जमा</p>
 					</div>
 				</div>
 				<div class="column-two" id="choice_demat">
 					<i class="icon-vertical-line hdfc-sprite"></i>
 					<i class="icon-options hdfc-sprite three"></i>
 					<div class="option-bg hdfc-sprite">
-						<p>Demat Services</p>
+						<p>डीमैट सेवाएं</p>
 					</div>
 				</div>
 				<div class="column-two" id="choice_forex">
 					<i class="icon-vertical-line hdfc-sprite"></i>
 					<i class="icon-options hdfc-sprite four"></i>
 					<div class="option-bg hdfc-sprite">
-						<p>Foreign Exchange</p>
+						<p>विदेशी मुद्रा</p>
 					</div>
 				</div>
 				<div class="column-two" id="choice_fixed_deposit">
 					<i class="icon-vertical-line hdfc-sprite"></i>
 					<i class="icon-options hdfc-sprite five"></i>
 					<div class="option-bg hdfc-sprite">
-						<p>Fixed Deposit</p>
+						<p>सावधि जमा</p>
 					</div>
 				</div>
 				<div class="column-two" id="choice_others">
 					<i class="icon-vertical-line hdfc-sprite"></i>
 					<i class="icon-options hdfc-sprite six"></i>
 					<div class="option-bg hdfc-sprite">
-						<p>Others</p>
+						<p>अन्य लोग</p>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div id="btnControls">
 			<ul>
-				<li><a href="index.htm"><i class="fa fa-angle-left"></i></a></li>
+				<li><a href="index.html"><i class="fa fa-angle-left"></i></a></li>
 				<li id="lanSelector"><a href=""><i class="fa fa-language"></i></a></li>
 			</ul>
 			<div id="languageSlider" class="card" style="display:none">
 				<div class="card-body">
 					<ul>
-						<li><a href="">हिंदी</a></li>
+						<li><a href="../eng/choice.html">ENGLISH</a></li>
 					</ul>
 				</div>
 			</div>
@@ -101,32 +101,11 @@
 		<div class="">Asimov Logo</div>
 		<p>Powered by<i class="icon-saya hdfc-sprite"></i></p>
 	</footer>
-	<script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="assets/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
-	<script type="text/javascript" src="assets/bootstrap-4.1.1/dist/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="assets/js/script.js"></script>
-	<script>
-			$(document).ready(function(){
-				startTime();	
-				$("#lanSelector").click(function(event) {
-					event.preventDefault();
-					$("#languageSlider").toggle( "slide" );
-				});
-			});
-						function startTime() {
-							var today = new Date();
-							var h = today.getHours();
-							var m = today.getMinutes();
-							m = checkTime(m);
-							document.getElementById('time').innerHTML = h + ":" + m;
-							var t = setTimeout(startTime, 500);
-						}
-						function checkTime(i) {
-							if (i < 10) {i = "0" + i};
-							return i;
-						}
-						</script>
+	<script type="text/javascript" src="../assets/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../assets/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../assets/bootstrap-4.1.1/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../assets/js/script.js"></script>
 </body>
-</html>
+</htmll>
 
 
